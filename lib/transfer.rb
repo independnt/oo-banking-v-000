@@ -15,7 +15,7 @@ def valid?
 end
 
 def execute_transaction
-
+  receiver.deposit(amount)
 end
 
 end
