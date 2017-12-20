@@ -30,4 +30,12 @@ def execute_transaction
   end
 end
 
+def reverse_transfer
+  if @status == "complete"
+    receiver.deduct(amount)
+    sender.deposit(amount)
+    @status = "reversed"
+end
+
+
 end
