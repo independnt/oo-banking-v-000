@@ -22,9 +22,7 @@ def do_nothing
 end
 
 def execute_transaction
-  if @status == "complete"
-    do_nothing
-  elsif valid?
+  if valid?
     receiver.deposit(amount)
     sender.deduct(amount)
     @status = "complete"
