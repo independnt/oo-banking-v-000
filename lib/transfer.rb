@@ -35,6 +35,8 @@ def reverse_transfer
     receiver.deduct(amount)
     sender.deposit(amount)
     @status = "reversed"
+  end
+  
 end
 
 
