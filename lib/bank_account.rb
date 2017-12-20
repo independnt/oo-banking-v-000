@@ -18,6 +18,10 @@ def deposit(amount)
   @balance = self.balance + amount
 end
 
+def deduct(amount)
+  @balance = self.balance - amount
+end
+
 def valid?
   if balance > 0 && status == "open"
     true
