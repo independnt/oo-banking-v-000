@@ -16,6 +16,8 @@ end
 
 def execute_transaction
   receiver.deposit(amount)
+  sender.deduct(amount)
+  @status = "complete"
 end
 
 end
