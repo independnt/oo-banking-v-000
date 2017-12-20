@@ -16,6 +16,7 @@ end
 
 def deposit(amount)
   self.balance + amount
+  binding.pry
 end
 
 def valid?
