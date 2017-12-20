@@ -14,7 +14,7 @@ def display_balance
 end
 
 def deposit(amount)
-  balance + amount
+  self.balance + amount
 end
 
 def valid?
