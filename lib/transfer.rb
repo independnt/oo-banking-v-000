@@ -25,10 +25,9 @@ end
 def execute_transaction
   if @status == "complete"
     do_nothing
-  elsif !sender.valid?
+  elsif !sender.valid? binding.pry
     "Transaction rejected. Please check your account balance."
     @status = "rejected"
-    binding.pry
   elsif valid?
     receiver.deposit(amount)
     sender.deduct(amount)
