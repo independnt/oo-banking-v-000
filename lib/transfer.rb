@@ -19,14 +19,15 @@ end
 
 def execute_transaction
   if @status == "complete"
-
-  if self.valid?
+    do_nothing
+  elsif self.valid?
     receiver.deposit(amount)
     sender.deduct(amount)
     @status = "complete"
   else
     "Transaction rejected. Please check your account balance."
     @status = "rejected"
+  end
 end
 
 end
