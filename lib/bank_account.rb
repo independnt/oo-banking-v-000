@@ -15,8 +15,7 @@ def display_balance
 end
 
 def deposit(amount)
-  self.balance + amount
-  binding.pry
+  @balance = self.balance + amount
 end
 
 def valid?
